@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+    <style>
+        body { font-family: Arial; background: #f9f9f9; }
+        .product {
+            background: white;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<h2>📦 Products</h2>
+
+{% for p in products %}
+    <div class="product">
+        <strong>{{ p.name }}</strong><br>
+        {{ p.description }}<br>
+        💰 Price: {{ p.price }}<br>
+        📦 Quantity: {{ p.quantity }}
+    </div>
+{% endfor %}
+
+</body>
+</html>
